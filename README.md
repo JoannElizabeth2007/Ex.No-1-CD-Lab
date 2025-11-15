@@ -22,7 +22,7 @@ To write a C program to implement a symbol table.
 8. Stop the program.
 
 # PROGRAM:
-
+```
 #include <stdio.h> 
 #include <ctype.h> 
 #include <string.h>
@@ -84,7 +84,7 @@ free(add[i]);
 return 0;
 }
 
-
+```
 # OUTPUT:
 
 <img width="525" height="340" alt="image" src="https://github.com/user-attachments/assets/e992e471-f3bd-4adf-8dc2-b2b4c3207f75" />
