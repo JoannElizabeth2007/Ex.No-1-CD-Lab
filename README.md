@@ -56,9 +56,12 @@ d[x] = c; printf("%c\t%p\tidentifier\n", c, p);
 } else 
 {
 char ch = b[j + 1];
-if (ch == '+' || ch == '-' || ch == '*' || ch == '=') { void *p = malloc(sizeof(char));
+if (ch == '+' || ch == '-' || ch == '*' || ch == '=') {
+void *p = malloc(sizeof(char));
 add[x] = p;
-d[x] = c; printf("%c\t%p\tidentifier\n", c, p); x++;
+d[x] = c;
+printf("%c\t%p\tidentifier\n", c, p);
+x++;
 }
 }
 }
