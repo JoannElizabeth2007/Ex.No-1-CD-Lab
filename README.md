@@ -49,32 +49,35 @@ printf("Symbol\taddr\ttype\n");
 
 for (j = 0; j <= n; j++) {
     c = b[j];
-if (isalpha((unsigned char)c)) { 
-    if (j == n) {
-void *p = malloc(sizeof(char)); add[x] = p;
-d[x] = c; printf("%c\t%p\tidentifier\n", c, p);
-} else 
-{
-char ch = b[j + 1];
-if (ch == '+' || ch == '-' || ch == '*' || ch == '=') {
-void *p = malloc(sizeof(char));
-add[x] = p;
-d[x] = c;
-printf("%c\t%p\tidentifier\n", c, p);
-x++;
-}
-}
-}
+    if (isalpha((unsigned char)c)) { 
+        if (j == n) {
+        void *p = malloc(sizeof(char));
+        add[x] = p;
+        d[x] = c;
+        printf("%c\t%p\tidentifier\n", c, p);
+    } else 
+    {
+    char ch = b[j + 1];
+    if (ch == '+' || ch == '-' || ch == '*' || ch == '=') {
+    void *p = malloc(sizeof(char));
+    add[x] = p;
+    d[x] = c;
+    printf("%c\t%p\tidentifier\n", c, p);
+    x++;
+    }
+    }
+    }
  
 }
 
 printf("\nThe symbol to be searched: "); 
 srch = getchar();
-for (i = 0; i <= x; i++) { if (srch == d[i]) {
-printf("Symbol Found\n"); 
-printf("%c@address%p\n", srch, add[i]); 
-flag = 1;
-}
+for (i = 0; i <= x; i++) {
+    if (srch == d[i]) {
+    printf("Symbol Found\n"); 
+    printf("%c@address%p\n", srch, add[i]); 
+    flag = 1;
+    }
 }
 
 if (flag == 0)
